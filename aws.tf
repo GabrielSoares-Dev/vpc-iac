@@ -4,7 +4,7 @@ provider "aws" {
   default_tags {
     tags = {
       "owner"        = "DevopsTeam"
-      "project-name" = "vpc-iac-${lower(var.environment)}"
+      "project-name" = "vpc-iac"
       "managed-by"   = "terraform"
     }
   }
