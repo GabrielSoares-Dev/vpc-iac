@@ -1,21 +1,23 @@
 resource "aws_subnet" "public_subnet" {
-  for_each = { for index, zone in var.subnet_availability_zones : index => zone }
+  for_each = var.public_subnets
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.0.0/20"
-  availability_zone = each.value
+  cidr_block = each.value.cidr_block
+  availability_zone = each.value.availability_zone
 
   tags = {
+    name = each.value.name
     type = "public"
   }
 }
 
 resource "aws_subnet" "private_subnet" {
-  for_each = { for index, zone in var.subnet_availability_zones : index => zone }
+  for_each = var.private_subnets
   vpc_id     = aws_vpc.main.id
-  cidr_block = "10.0.16.0/20"
-  availability_zone = each.value
+  cidr_block = each.value.cidr_block
+  availability_zone = ach.value.availability_zone
 
   tags = {
+    name = each.value.name
     type = "private"
   }
 }
