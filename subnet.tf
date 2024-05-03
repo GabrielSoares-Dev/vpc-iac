@@ -13,7 +13,7 @@ resource "aws_subnet" "private_subnet" {
   for_each = var.subnet_availability_zones
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.16.0/20"
-  availability_zone = "us-east-2b"
+  availability_zone = each.value
 
   tags = {
     type = "private"
