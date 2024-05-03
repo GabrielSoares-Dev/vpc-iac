@@ -5,7 +5,7 @@ resource "aws_subnet" "public_subnet" {
   availability_zone = each.value.availability_zone
 
   tags = {
-    name = each.value.name
+    Name = each.value.name
     type = "public"
   }
 }
@@ -17,7 +17,7 @@ resource "aws_subnet" "private_subnet" {
   availability_zone = each.value.availability_zone
 
   tags = {
-    name = each.value.name
+    Name = each.value.name
     type = "private"
   }
 }
