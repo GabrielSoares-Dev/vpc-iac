@@ -29,7 +29,7 @@ jobs:
         run: terraform workspace select dev
       - name: Plan
         run: terraform plan -out plan.out
-      - name: Apply
-        run: terraform apply plan.out
-      # - name: Destroy
-      #   run: terraform destroy -auto-approve
+      # - name: Apply
+      #   run: terraform apply plan.out
+      - name: Destroy
+        run: terraform destroy -auto-approve
