@@ -6,7 +6,6 @@ resource "aws_subnet" "public_subnet" {
 
   tags = {
     Name = each.value.name
-    type = "public"
   }
 }
 
@@ -18,6 +17,5 @@ resource "aws_subnet" "private_subnet" {
 
   tags = {
     Name = each.value.name
-    type = "private"
   }
 }
