@@ -4,7 +4,6 @@ resource "aws_vpc" "main" {
 
   main_route_table_id    = aws_route_table.public_route_table.id
   default_network_acl_id = aws_network_acl.public_network_acl.id
-  default_route_table_id = aws_route_table.public_route_table.id
   tags = {
     Name = "Main VPC"
   }
