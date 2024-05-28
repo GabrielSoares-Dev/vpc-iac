@@ -6,3 +6,9 @@ resource "aws_vpc" "main" {
     Name = "Main VPC"
   }
 }
+
+resource "aws_default_vpc" "default" {
+  tags = {
+    Name = "Default VPC"
+  }
+}
