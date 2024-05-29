@@ -22,7 +22,5 @@ jobs:
         run: terraform init
       - name: Validate
         run: terraform validate
-      - name: Select workspace
-        run: terraform workspace select dev
       - name: Destroy
         run: terraform destroy -auto-approve
