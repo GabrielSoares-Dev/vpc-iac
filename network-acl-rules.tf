@@ -1,5 +1,5 @@
 resource "aws_network_acl_rule" "allow_mysql_inbound" {
-  network_acl_id = aws_network_acl.private_network_acl.id
+  network_acl_id = aws_network_acl.public_network_acl.id
   rule_number    = 100
   protocol       = "tcp"
   rule_action    = "allow"
