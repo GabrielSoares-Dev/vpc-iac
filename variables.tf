@@ -20,6 +20,11 @@ variable "public_subnets" {
       name              = "public_subnet_us-east_2c"
       cidr_block        = "172.31.32.0/20"
       availability_zone = "us-east-2c"
+    },
+    boilerplate_laravel_ecs_subnet = {
+      name              = "boilerplate_laravel_ecs_subnet"
+      cidr_block        = "172.31.96.0/20"
+      availability_zone = "us-east-2c"
     }
   }
 }
