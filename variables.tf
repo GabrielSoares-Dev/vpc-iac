@@ -21,8 +21,18 @@ variable "public_subnets" {
       cidr_block        = "172.31.32.0/20"
       availability_zone = "us-east-2c"
     },
-    boilerplate_laravel_ecs_subnet = {
-      name              = "boilerplate_laravel_ecs_subnet"
+    boilerplate_laravel_ecs_subnet_us_east_2a = {
+      name              = "boilerplate_laravel_ecs_subnet_us_east_2a"
+      cidr_block        = "172.31.112.0/20"
+      availability_zone = "us-east-2a"
+    },
+    boilerplate_laravel_ecs_subnet_us_east_2b = {
+      name              = "boilerplate_laravel_ecs_subnet_us_east_2b"
+      cidr_block        = "172.31.144.0/20"
+      availability_zone = "us-east-2b"
+    },
+    boilerplate_laravel_ecs_subnet_us_east_2c = {
+      name              = "boilerplate_laravel_ecs_subnet_us_east_2c"
       cidr_block        = "172.31.96.0/20"
       availability_zone = "us-east-2c"
     }
