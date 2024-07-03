@@ -1,3 +1,8 @@
+variable "environment" {
+  type    = string
+  default = "DEV"
+}
+
 variable "public_subnets" {
   type = map(object({
     name              = string
